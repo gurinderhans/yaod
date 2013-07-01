@@ -30,13 +30,17 @@ function uploadFile(file){
 	message.appendChild(div); 
 	xhr.upload.addEventListener("progress", function(e){ 
 		var percentComplete = Math.round((e.loaded / e.total)*100); 
-		div.innerHTML=file.name + " " + percentComplete + "%"; 
+		div.innerHTML="<span class='text'>" + file.name + "</span>";
+		div.style.width=percentComplete+"%";
 	}); 
 	//event for when upload is finished 
 	xhr.upload.addEventListener('load', function(e){ 
+		div.innerHTML="<span class='text'>"+file.name+" Done</span>";
+		div.style.width="100%";
+		div.style.background="#3ab05d";
 		xhr.onreadystatechange=function(){ 
 			if (xhr.readyState==4 && xhr.status==200){ 
-				console.log(xhr.responseText); 
+				//console.log(xhr.responseText); 
 			} 
 		} 
 	}); 
@@ -48,11 +52,9 @@ function browseUpload(e){
 	var fileInputfield = document.getElementById("uploadFile"); 
 	var files = fileInputfield.files;
 	var filesLen = files.length; 
-	var i = 0; 
-	var data = new FormData(); 
-	var xhr = new XMLHttpRequest(); 
-	while(i < filesLen){ 
-		uploadFile(files[i]); 
+	var i = 0;
+	while(i < filesLen){
+		uploadFile(files[i]);
 		i++; 
 	} 
 } 

@@ -13,7 +13,7 @@
 						<input id="uploadFile" type="file" name="file[]"  multiple />
 					</form>
 				</div>
-				<div align="center" id="message"></div>
+				<div id="message"></div>
 				
 			</div>
 		</body>
