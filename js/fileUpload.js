@@ -15,8 +15,8 @@ function dropUpload(e){
 	e.preventDefault(); 
 	var files = e.dataTransfer.files; 
 	var filesLen = files.length; 
-	var i = 0;
-	while(i < filesLen){
+	var i = 0; 
+	while(i < filesLen){ 
 		uploadFile(files[i]); 
 		i++; 
 	} 
@@ -26,17 +26,18 @@ function uploadFile(file){
 	var xhr = new XMLHttpRequest(); 
 	data.append('file[]', file); 
 	var div = document.createElement("div"); 
+	div.setAttribute("class","fileInfo");
 	var message = document.getElementById("message"); 
 	message.appendChild(div); 
 	xhr.upload.addEventListener("progress", function(e){ 
 		var percentComplete = Math.round((e.loaded / e.total)*100); 
-		div.innerHTML="<span class='text'>" + file.name + "</span>";
-		div.style.width=percentComplete+"%";
+		div.innerHTML="<span><p class='fileName'>"+file.name+"</p></span>";
+		div.style.width=percentComplete+"%"; 
 	}); 
 	//event for when upload is finished 
 	xhr.upload.addEventListener('load', function(e){ 
-		div.innerHTML="<span class='text'>"+file.name+" Done</span>";
-		div.style.width="100%";
+		div.innerHTML="<span><p class='fileName'>"+file.name+"</p></span>";
+		div.style.width="100%"; 
 		div.style.background="#3ab05d";
 		xhr.onreadystatechange=function(){ 
 			if (xhr.readyState==4 && xhr.status==200){ 
@@ -46,15 +47,18 @@ function uploadFile(file){
 	}); 
 	xhr.open("POST", "fileUpload.php"); 
 	xhr.setRequestHeader("Cache-Control", "no-cache"); 
-	xhr.send(data);
+	xhr.send(data); 
 } 
-function browseUpload(e){ 
+function browseUpload(e){
+	var uploader = document.getElementById("message");
+	uploader.style.top="15px";
 	var fileInputfield = document.getElementById("uploadFile"); 
-	var files = fileInputfield.files;
+	var files = fileInputfield.files; 
 	var filesLen = files.length; 
-	var i = 0;
-	while(i < filesLen){
-		uploadFile(files[i]);
+	var i = 0; 
+	while(i < filesLen){ 
+		uploadFile(files[i]); 
+		//$("#message div:nth-child("+(i+1)+")").attr("id", i); 
 		i++; 
 	} 
 } 
