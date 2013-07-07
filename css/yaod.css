@@ -1,13 +1,18 @@
+html,body{
+	background:#333;
+}
 #droparea{
 	position:absolute;
 	top:0;
 	left:0;
-	width:100%;
+	width:1500px;
 	height:100%;
+	background:#333;
 }
 #message{
+	z-index:100;
     margin:auto;
-    position:relative;
+    position:absolute;
     top:-999px;
     transition: top 0.7s;
 	-webkit-transition: top 0.7s; /* Safari */
@@ -35,25 +40,29 @@
     display:table-cell;
     vertical-align:middle;
 }
-#header{
-    color:#ededed;
-    z-index:1;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:77px;
-    background:#CC7D60;
-    box-shadow:0.1px 0.1px 5px #333;
+.row{
+	width:auto;
+	position:relative;
+	margin-left:50px;
 }
-#header div form,h1{
-    display:inline-block;
+#row1 div{
+	background:orange;
 }
-#body{
-    position:absolute;
-    top:77px;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#f3f3f3;
+#row2 div{
+	background:rgb(97, 197, 97);
+}
+#row3 div{
+	background:darkred;
+}
+.wideTile{
+	margin:0px 7px 0px 0px;
+	height:100%;
+	width:380px;
+	float:left;
+}
+.smallTile{
+	margin:0px 7px 0px 0px;
+	height:100%;
+	width:186.6px;
+	float:left;
 }

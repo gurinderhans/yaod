@@ -12,7 +12,9 @@ function dragover(e){
 } 
 function dropUpload(e){ 
 	e.stopPropagation(); 
-	e.preventDefault(); 
+	e.preventDefault();
+	var uploader = document.getElementById("message");
+	uploader.style.top="95px";
 	var files = e.dataTransfer.files; 
 	var filesLen = files.length; 
 	var i = 0; 
@@ -39,11 +41,6 @@ function uploadFile(file){
 		div.innerHTML="<span><p class='fileName'>"+file.name+"</p></span>";
 		div.style.width="100%"; 
 		div.style.background="#3ab05d";
-		xhr.onreadystatechange=function(){ 
-			if (xhr.readyState==4 && xhr.status==200){ 
-				//console.log(xhr.responseText); 
-			} 
-		} 
 	}); 
 	xhr.open("POST", "fileUpload.php"); 
 	xhr.setRequestHeader("Cache-Control", "no-cache"); 
@@ -51,7 +48,7 @@ function uploadFile(file){
 } 
 function browseUpload(e){
 	var uploader = document.getElementById("message");
-	uploader.style.top="15px";
+	uploader.style.top="95px";
 	var fileInputfield = document.getElementById("uploadFile"); 
 	var files = fileInputfield.files; 
 	var filesLen = files.length; 
