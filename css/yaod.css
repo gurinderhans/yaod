@@ -5,7 +5,6 @@ html,body{
 	position:absolute;
 	top:0;
 	left:0;
-	width:1500px;
 	height:100%;
 	background:#333;
 }
@@ -40,29 +39,49 @@ html,body{
     display:table-cell;
     vertical-align:middle;
 }
-.row{
-	width:auto;
+/*Dashboard Styles*/
+.sortable{
+	left:50px
+}
+[data-sizex="1"]{
+	width:190px;
+}
+[data-sizex="2"]{
+	width:350px;
+}
+[data-sizey="1"]{
+	height:170px;
+}
+[data-sizey="3"]{
+	height:510px;
+}
+.sortable div {
+	float:left;
+	margin-left:5px;
+}
+html,body{
+	background:#333;
+}
+.red{background:red}
+.blue{background:blue}
+.green{background:green}
+#droparea{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#333;
+}
+#row1{
 	position:relative;
-	margin-left:50px;
+	top:80px;
 }
-#row1 div{
-	background:orange;
+#row2{
+	position:relative;
+	top:86px;
 }
-#row2 div{
-	background:rgb(97, 197, 97);
-}
-#row3 div{
-	background:darkred;
-}
-.wideTile{
-	margin:0px 7px 0px 0px;
-	height:100%;
-	width:380px;
-	float:left;
-}
-.smallTile{
-	margin:0px 7px 0px 0px;
-	height:100%;
-	width:186.6px;
-	float:left;
+#row3{
+	position:relative;
+	top:92px;
 }
