@@ -6,25 +6,30 @@
 */
 
 $(".sortable").height($('.tile').height()+"px");
+var i = 0;
+var rowWidthArr = new Array();
 /*Row 1 width*/
 var row1Width = 0;
-var numTilesInRow1 = $("#row1 div").length;
 $("#row1 div").each(function(index){
-	row1Width = $(this).width() * numTilesInRow1+100;
+	rowWidthArr[i] = $(this).width();
+	row1Width += rowWidthArr[i]+33;
+	i++;
 });
 $("#row1").width(row1Width+"px");
 /*Row 2 width*/
 var row2Width = 0;
-var numTilesInRow2 = $("#row2 div").length;
 $("#row2 div").each(function(index){
-	row2Width = $(this).width() * numTilesInRow2+100;
+	rowWidthArr[i] = $(this).width();
+	row2Width += rowWidthArr[i]+33;
+	i++;
 });
 $("#row2").width(row2Width+"px");
 /*Row 3 width*/
 var row3Width = 0;
-var numTilesInRow3 = $("#row3 div").length;
 $("#row3 div").each(function(index){
-	row3Width = $(this).width() * numTilesInRow3+100;
+	rowWidthArr[i] = $(this).width();
+	row3Width += rowWidthArr[i]+33;
+	i++;
 });
 $("#row3").width(row3Width+"px");
 
@@ -32,51 +37,58 @@ $("#row3").width(row3Width+"px");
 $(function() {
 	$( ".sortable" ).sortable({
 		revert: 400,
-		scroll: true,
+		scroll: 1000,
+		opacity: 0.9,
 		connectWith: ".sortable",
 		change: function( event, ui ) {
 			/*Row 1 width*/
 			var row1Width = 0;
-			var numTilesInRow1 = $("#row1 div").length;
 			$("#row1 div").each(function(index){
-				row1Width = $(this).width() * numTilesInRow1+100;
+				rowWidthArr[i] = $(this).width();
+				row1Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row1").width(row1Width+"px");
 			/*Row 2 width*/
 			var row2Width = 0;
-			var numTilesInRow2 = $("#row2 div").length;
 			$("#row2 div").each(function(index){
-				row2Width = $(this).width() * numTilesInRow2+100;
+				rowWidthArr[i] = $(this).width();
+				row2Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row2").width(row2Width+"px");
 			/*Row 3 width*/
 			var row3Width = 0;
-			var numTilesInRow3 = $("#row3 div").length;
 			$("#row3 div").each(function(index){
-				row3Width = $(this).width() * numTilesInRow3+100;
+				rowWidthArr[i] = $(this).width();
+				row3Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row3").width(row3Width+"px");
 		},
 		stop: function( event, ui ) {
 			/*Row 1 width*/
 			var row1Width = 0;
-			var numTilesInRow1 = $("#row1 div").length;
 			$("#row1 div").each(function(index){
-				row1Width = $(this).width() * numTilesInRow1+100;
+				rowWidthArr[i] = $(this).width();
+				row1Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row1").width(row1Width+"px");
 			/*Row 2 width*/
 			var row2Width = 0;
-			var numTilesInRow2 = $("#row2 div").length;
 			$("#row2 div").each(function(index){
-				row2Width = $(this).width() * numTilesInRow2+100;
+				rowWidthArr[i] = $(this).width();
+				row2Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row2").width(row2Width+"px");
 			/*Row 3 width*/
 			var row3Width = 0;
-			var numTilesInRow3 = $("#row3 div").length;
 			$("#row3 div").each(function(index){
-				row3Width = $(this).width() * numTilesInRow3+100;
+				rowWidthArr[i] = $(this).width();
+				row3Width += rowWidthArr[i]+33;
+				i++;
 			});
 			$("#row3").width(row3Width+"px");
 		}

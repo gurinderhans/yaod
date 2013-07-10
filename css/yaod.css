@@ -40,11 +40,8 @@ html,body{
     vertical-align:middle;
 }
 /*Dashboard Styles*/
-.sortable{
-	left:50px
-}
 [data-sizex="1"]{
-	width:190px;
+	width:172.5px;
 }
 [data-sizex="2"]{
 	width:350px;
@@ -62,9 +59,21 @@ html,body{
 html,body{
 	background:#333;
 }
-.red{background:red}
-.blue{background:blue}
-.green{background:green}
+
+.blueishgreen{background:#2aa0b0;}
+.orange{background:#d9532e;}
+.lightBlue{background:#62c1fc;}
+.darkPink{background:#a804ba;}
+.purple{background:#7c63c7;}
+.blue{background:#3089f0;}
+.green{background:#3bb339;}
+.darkBlue{background:#0056c7;}
+.red{background:#bd2a51;}
+
+.sortable{
+	position:relative;
+	left:50px;
+}
 #droparea{
 	position:absolute;
 	top:0;
@@ -73,15 +82,13 @@ html,body{
 	height:100%;
 	background:#333;
 }
-#row1{
-	position:relative;
-	top:80px;
-}
 #row2{
-	position:relative;
-	top:86px;
+	top:6px;
 }
 #row3{
+	top:12px;
+}
+#group1{
 	position:relative;
-	top:92px;
+	top:80px;
 }
