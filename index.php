@@ -1,45 +1,49 @@
-<!DOCTYPE html>
-	<html>
-		<head>
-			<title>yaod</title>
-			<link type="text/css" rel="stylesheet" href="css/yaod.css" />
-		</head>
-		<body>
-			<div id="droparea">
-				<div id="group1">
-					<div class="sortable" id="row1" style="min-width:1200px">
-						<div data-sizex="2" data-sizey="1" class="tile blueishgreen"></div>
-						<div data-sizex="2" data-sizey="1" class="tile purple"></div>
-						<div data-sizex="1" data-sizey="1" class="tile blue"></div>
-						<div data-sizex="1" data-sizey="1" class="tile green"></div>
-					</div>
-					<div class="sortable" id="row2" style="min-width:1200px">
-						<div data-sizex="2" data-sizey="1" class="tile orange"></div>
-						<div data-sizex="2" data-sizey="1" class="tile blueishgreen"></div>
-						<div data-sizex="1" data-sizey="1" class="tile darkPink"></div>
-						<div data-sizex="1" data-sizey="1" class="tile darkBlue"></div>
-					</div>
-					<div class="sortable" id="row3" style="min-width:1200px">
-						<div data-sizex="1" data-sizey="1" class="tile lightBlue"></div>
-						<div data-sizex="1" data-sizey="1" class="tile darkPink"></div>
-						<div data-sizex="2" data-sizey="1" class="tile blue"></div>
-						<div data-sizex="2" data-sizey="1" class="tile red"></div>
-					</div>
-				</div>
-			</div>
-			<div id="message"></div>
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><!--jQuery-->
-			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script><!--jQuery UI-->
-			<!--<script type="text/javascript" src="js/fileUpload.js"></script>-->
-			<script type="text/javascript" src="js/dashboard.js"></script>
-			<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-			<script>
-			$(document).ready(function() {
-				$('html, body, *').mousewheel(function(e, delta) {
-					this.scrollLeft -= (delta * 180);
-					e.preventDefault();
-				});
-			});
-			</script>
-		</body>
-	</html>
+<!doctype html>
+ 
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>yaod</title>
+		<link rel="stylesheet" href="css/yaod.css" />
+	</head>
+	<body>
+		<div id="droparea">
+			<div class="groupTitle"><span>Group 1</span></div>
+			<ul class="sortable droptrue">
+				<li data-sizex="2" class="tile blueishgreen"></li>
+				<li data-sizex="2" class="tile darkPink"></li>
+				<li data-sizex="1" class="tile purple"></li>
+				<li data-sizex="1" class="tile blue"></li>
+				<li data-sizex="2" class="tile darkBlue"></li>
+				<li data-sizex="1" class="tile blue"></li>
+				<li data-sizex="2" class="tile darkBlue"></li>
+				<li data-sizex="2" class="tile orange"></li>
+				<li data-sizex="1" class="tile orange"></li>
+				<li data-sizex="2" class="tile orange"></li>
+				<li data-sizex="2" class="tile orange"></li>
+			</ul>
+			<div class="groupTitle"><span>Group 2</span></div>
+			<ul class="sortable droptrue">
+				<li data-sizex="2" class="tile blueishgreen"></li>
+				<li data-sizex="2" class="tile darkBlue"></li>
+				<li data-sizex="2" class="tile orange"></li>
+				<li data-sizex="2" class="tile darkPink"></li>
+				<li data-sizex="2" class="tile purple"></li>
+				<li data-sizex="2" class="tile blue"></li>
+			</ul>
+			<div class="groupTitle"><span>Group 3</span></div>
+			<ul class="sortable droptrue">
+				<li data-sizex="2" class="tile darkPink"></li>
+				<li data-sizex="2" class="tile purple"></li>
+				<li data-sizex="2" class="tile blue"></li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div id="message"></div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="js/dashboard.js" type="text/javascript"></script>
+		<script src="js/fileUpload.js" type="text/javascript"></script>
+	</body>
+</html>
