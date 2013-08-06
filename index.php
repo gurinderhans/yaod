@@ -10,32 +10,41 @@
 		<div id="droparea">
 			<div class="groupTitle"><span>Group 1</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" class="tile blueishgreen"></li>
-				<li data-sizex="2" class="tile darkPink"></li>
-				<li data-sizex="1" class="tile purple"></li>
-				<li data-sizex="1" class="tile blue"></li>
-				<li data-sizex="2" class="tile darkBlue"></li>
-				<li data-sizex="1" class="tile blue"></li>
-				<li data-sizex="2" class="tile darkBlue"></li>
-				<li data-sizex="2" class="tile orange"></li>
-				<li data-sizex="1" class="tile orange"></li>
-				<li data-sizex="2" class="tile orange"></li>
-				<li data-sizex="2" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
+				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
+				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
+				<li data-sizex="1" data-sizey="1" class="tile blue"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 			</ul>
 			<div class="groupTitle"><span>Group 2</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" class="tile blueishgreen"></li>
-				<li data-sizex="2" class="tile darkBlue"></li>
-				<li data-sizex="2" class="tile orange"></li>
-				<li data-sizex="2" class="tile darkPink"></li>
-				<li data-sizex="2" class="tile purple"></li>
-				<li data-sizex="2" class="tile blue"></li>
+				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
+				<li data-sizex="1" data-sizey="1" class="tile blue"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
+				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile green"></li>
+				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"></li>
+				
 			</ul>
 			<div class="groupTitle"><span>Group 3</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" class="tile darkPink"></li>
-				<li data-sizex="2" class="tile purple"></li>
-				<li data-sizex="2" class="tile blue"></li>
+				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile green"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
+				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
+				
 			</ul>
 			<br />
 			<br />
