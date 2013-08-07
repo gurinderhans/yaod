@@ -10,9 +10,20 @@
 		<div id="droparea">
 			<div class="groupTitle"><span>Group 1</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
-				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
-				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
+				<li data-sizex="2" data-sizey="1" class="tile blueishgreen">
+                    <span class="tileType">Text</span>
+                    <h1>Hupcake ipsum!</h1>
+                    <p>Donut chocolate cake oat cake. Candy capie unerdwear.com cookie jujubes donut chocolate bar macaroon.</p>
+                </li>
+				<li data-sizex="2" data-sizey="1" class="tile darkPink">
+                    <span class="tileType">Text</span>
+                    <h1>Hupcake ipsum!</h1>
+                    <p>Donut chocolate cake oat cake. Candy capie unerdwear.com cookie jujubes donut chocolate bar macaroon.</p>
+                </li>
+				<li data-sizex="1" data-sizey="1" class="tile purple">
+                    <span class="smallTileType">Text</span>
+                    <p class="smallTileP">Donut chocolate cake oat cake. Candy capie unerdwear.com cookie jujubes donut chocolate bar macaroon.</p>
+                </li>
 				<li data-sizex="1" data-sizey="1" class="tile green"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue"></li>

@@ -1,8 +1,11 @@
 /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400);*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 html,body{
 	background:#333;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
 }
+/*File uploader Styles*/
 #droparea{
 	position:absolute;
 	top:0;
@@ -41,7 +44,22 @@ html,body{
     display:table-cell;
     vertical-align:middle;
 }
-/*Dashboard Styles*/
+/*Default styles*/
+h1,p{
+    font-weight:100;
+    text-align:left;
+    margin:0;
+}
+h1{
+    font-size:1.35em;
+    margin:3% 0 1.7% -8.7%;
+}
+p{
+    font-size:0.65em;
+    margin:0 0 0 -8.7%;
+    line-height:1.5;
+}
+/*Tile colors*/
 .blueishgreen{background:#2aa0b0;}
 .orange{background:#d9532e;}
 .lightBlue{background:#62c1fc;}
@@ -52,10 +70,10 @@ html,body{
 .darkBlue{background:#0056c7;}
 .red{background:#bd2a51;}
 
+/*Tile Sizes*/
 [data-sizex="1"]{
 	width:165px;
 }
-
 [data-sizex="2"]{
 	width:340px;
 }
@@ -65,7 +83,7 @@ html,body{
 [data-sizey="1"]{
 	height:170px;
 }
-
+/*Dashboard Styles*/
 .sortable{
 	list-style-type:none;
 	margin-top:50px;
@@ -77,8 +95,11 @@ html,body{
 }
 .sortable li{
 	margin:4px;
+    padding:0;
 	float:left;
 	font-size:1.2em;
+    text-align:left;
+    display:table;
 }
 .sortable li:hover{
 	border:3px solid rgba(0, 0, 0, 0.3);
@@ -88,6 +109,24 @@ html,body{
 	border:0px solid rgba(0, 0, 0, 0.3);
 	margin:4px;
 }
+.tileType{
+    font-size:0.6em;
+    padding:0 0 2% 5%;
+    display:table-cell;
+    vertical-align: bottom;
+    font-weight:bolder;
+}
+.smallTileType{
+    font-size:0.6em;
+    padding:0 0 3% 10%;
+    display:table-cell;
+    vertical-align: bottom;
+    font-weight:bolder;
+}
+.smallTileP{
+    margin:9% 0 0 -20.4%;
+}
+/*Group Title Styles*/
 .groupTitle{
 	display:table;
 	background:#b84c3d;
@@ -99,8 +138,7 @@ html,body{
 .groupTitle span{
 	display:table-cell;
 	vertical-align:middle;
-	font-size:2em;
+	font-size:2.3em;
 	font-weight:100;
-	font-family: 'Open Sans', sans-serif;
 	color:white;
 }
