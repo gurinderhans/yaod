@@ -42,9 +42,14 @@ function uploadFile(file){
 		div.style.width="100%"; 
 		div.style.background="#3ab05d";
 	}); 
-	xhr.open("POST", "fileUpload.php"); 
+	/*xhr.onreadystatechange=function(){
+		if (xhr.readyState==4 && xhr.status==200){
+			console.log(xhr.responseText);
+		}
+	}*/
+	xhr.open("POST", "../php/fileUpload.php"); 
 	xhr.setRequestHeader("Cache-Control", "no-cache"); 
-	xhr.send(data); 
+	xhr.send(data);
 } 
 function browseUpload(e){
 	var uploader = document.getElementById("message");
@@ -65,6 +70,9 @@ window.addEventListener("load", function(e){
 	droparea.addEventListener("dragexit", dragexit); 
 	droparea.addEventListener("dragover", dragover); 
 	droparea.addEventListener("drop", dropUpload); 
-	var fileInput = document.getElementById("uploadFile"); 
+	var fileInput = document.getElementById("uploadFile");
+	if(fileInput == null){
+	    return [];
+	}
 	fileInput.addEventListener("change", browseUpload); 
 });
