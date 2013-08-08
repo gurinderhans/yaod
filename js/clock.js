@@ -1,7 +1,9 @@
 var myVar=setInterval(function(){myTimer()},1000);
-$("#clockWrapper h2").html("<img src='https://themes.svn.wordpress.org/presswork/0.9/admin/images/loader.gif' />");
+$("#clockWrapper h2").html("<img src='../images/483.gif' />");
+$("#clockWrapper").css("background","#fff");
 function myTimer(){
     var d=new Date();
     var t=d.toLocaleTimeString("en-US");
     $("#clockWrapper h2").html(t);
+    $("#clockWrapper").css("background","none");
 }

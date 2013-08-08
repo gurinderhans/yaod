@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 html,body{
 	background:#333;
     color:white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 /*File uploader Styles*/
 #droparea{
@@ -98,87 +99,77 @@ h1,p{
 	border:0px solid rgba(0, 0, 0, 0.3);
 	margin:4px;
 }
-.wideTileTypeText{
-    font-size:0.6em;
+/*Tile type text styles*/
+.tileType{
+    font-size:0.5em;
     font-weight:400;
     position:absolute;
-    left:5%;
     color:#dbdbdb;
     bottom:3%;
     z-index:1;
+    font-family:"Open Sans", sans-serif;
 }
-.smallTileTypeText{
-    font-size:0.6em;
-    font-weight:400;
-    position:absolute;
-    left:10%;
-    color:#dbdbdb;
-    bottom:3%;
-    z-index:1;
+[data-sizex="2"] span{
+	left: 3%;
 }
-.wideTileP{
-    font-size:0.7em;
-    line-height:1.5;
-    width:80%;
-    position:absolute;
-    left:5%;
-    top:25%;
+[data-sizex="1"] span{
+	left: 6%;
 }
-.wideTilePWithImage{
-    font-size:0.7em;
-    line-height:1.5;
-    width:53%;
-    position:absolute;
-    right:4%;
-    top:14%;
+/*Text Snippet Styles */
+.textSnippet p{
+	font-size: 0.7em;
+	position:absolute;
+	top: 2.5%;
+	left: 5%;
+	width: 90%;
 }
-.wideTileH1WithImage{
-    position:absolute;
-    right:9%;
-    top:30%;
-    font-weight:400;
-}
-.smallTileP{
-    line-height:1.5;
-    font-size:0.7em;
-    width:80%;
-    position:absolute;
-    left:10%;
-    top:7%;
-}
-.wideTileh1{
-    font-size:1.35em;
-    position:absolute;
-    top:5%;
-    left:5%;
-}
-.smallTileImg{
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-}
-.wideTileImg{
-    position:absolute;
-    left:6%;
-    top:10%;
-    width:115px;
-    height:118px;
-}
+/*Clock tile*/
 #clockWrapper{
     border:2px solid white;
     border-radius:100%;
-    width:85%;
-    height:85%;
+    width:80%;
+    height:80%;
     text-align:center;
     display:table;
-    margin:7.5% auto;
+    margin:10% auto;
 }
 #clockWrapper h2{
     display:table-cell;
     vertical-align:middle;
-    font-weight:400;
+    font-weight:100;
+}
+/*Calendar tile*/
+.calendar h1{
+	position:absolute;
+	right:3%;
+	top:3%;
+	font-weight:100;
+	font-size:3.5em;
+}
+.calendar h3{
+	position:absolute;
+	right:3%;
+	top:35%;
+	font-weight:100;
+}
+.calendar p{
+	position:absolute;
+	left:5%;
+	top:17%;
+	font-weight:300;
+	font-size:0.9em;
+}
+.timeDue{
+	font-size:0.7em;
+	font-weight:bold;
+}
+/*Just Image tile*/
+.image img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
 }
 /*Group Title Styles*/
 .groupTitle{
@@ -193,6 +184,6 @@ h1,p{
 	display:table-cell;
 	vertical-align:middle;
 	font-size:2.3em;
-	font-weight:300;
+	font-weight:100;
 	color:white;
 }
