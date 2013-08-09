@@ -118,9 +118,7 @@ h1,p{
 /*Text Snippet Styles */
 .textSnippet p{
 	font-size: 0.7em;
-	position:absolute;
-	top: 2.5%;
-	left: 5%;
+	margin:3% auto;
 	width: 90%;
 }
 /*Clock tile*/
@@ -152,12 +150,15 @@ h1,p{
 	top:35%;
 	font-weight:100;
 }
-.calendar p{
+.calendar table{
 	position:absolute;
-	left:5%;
 	top:17%;
+	left:5%;
+}
+.calendar td{
 	font-weight:300;
 	font-size:0.9em;
+	border-bottom:1px solid red;
 }
 .timeDue{
 	font-size:0.7em;
