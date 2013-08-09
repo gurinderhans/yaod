@@ -27,10 +27,11 @@
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
 					<span class="tileType">Calendar</span>
-					<h1>07</h1>
-					<h3>Wednesday</h3>
-					<p id="eventOne">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
-                    <p id="eventTwo">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
+					<h1>08</h1>
+					<h3>Thursday</h3>
+					<p class="event" id="1">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
+                    <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
+                    <p class="event" id="3">Learn git on<br />codeschool<br /><span class="timeDue">10:30PM - 10:50PM</span></p>
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>

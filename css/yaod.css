@@ -156,6 +156,7 @@ h1,p{
     position:absolute;
     top:17%;
     left:5%;
+    display:none;
 }
 .timeDue{
 	font-size:0.7em;
