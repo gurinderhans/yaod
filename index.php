@@ -29,14 +29,8 @@
 					<span class="tileType">Calendar</span>
 					<h1>07</h1>
 					<h3>Wednesday</h3>
-					<table border="0">
-						<tr>
-							<td>Finish yaod<br />project<br /><span class="timeDue">5:30-6:00PM</span></td>
-						</tr>
-						<tr>
-							<td>Work on<br />frontEnd<br /><span class="timeDue">7:30-10:00PM</span></td>
-						</tr>
-					</table>
+					<p id="eventOne">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
+                    <p id="eventTwo">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>

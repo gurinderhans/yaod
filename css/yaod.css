@@ -150,20 +150,19 @@ h1,p{
 	top:35%;
 	font-weight:100;
 }
-.calendar table{
-	position:absolute;
-	top:17%;
-	left:5%;
-}
-.calendar td{
+.calendar p{
 	font-weight:300;
 	font-size:0.9em;
-	border-bottom:1px solid red;
+    position:absolute;
+    top:17%;
+    left:5%;
 }
 .timeDue{
 	font-size:0.7em;
 	font-weight:bold;
 }
+
+
 /*Just Image tile*/
 .image img{
 	width:100%;
