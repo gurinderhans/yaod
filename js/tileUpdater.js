@@ -7,6 +7,7 @@ function updateImage(){
 		if(data != ''){
 			$(".image #smallIMG").fadeOut('fast', function() {
 				// Animation complete.
+				$(".image > .tileType").fadeIn();
 				$(this).attr("src",data);
 				$(this).css("margin","0");
 			}).delay(100).fadeIn();
@@ -18,8 +19,6 @@ function updateImage(){
 		imageToRequest++;
 	}
 }
-
-
 
 
 
@@ -49,11 +48,22 @@ function updateDate(){
 updateDate();
 updateDay();
 var numCalendarEvents = $(".calendar p").size();
-$(".calendar > #1").show().delay(12000).hide("slide", { direction: "left" }, 200);
 var nextEvent = 2;
 var dirShow = "";
 var dirHide = "";
-var a=setInterval(function(){updateCalendar()},12400); 
+if(numCalendarEvents > 0){
+	$(".calendar .tileIcon").delay(2000).hide("slide", { direction: "left" }, 200, function(){
+		$(".calendar > .tileType").fadeIn();
+		startCalendarUpdate();
+	});
+}
+function startCalendarUpdate(){
+	$(".calendar > #1").show("slide", { direction: "right" }, 200).delay(12000).hide("slide", { direction: "left" }, 200);
+	var a=setInterval(function(){
+		updateCalendar();
+		console.log("updateCalendar();");
+	},12400);
+}
 function updateCalendar(){
     var randomNum = Math.floor(Math.random()*2);
     if(randomNum === 1){
@@ -76,13 +86,23 @@ function updateCalendar(){
 
 
 
+/*Running the clock */
+
+var c=setInterval(function(){myTimer()},1000);
+$("#clockWrapper h2").html("<img src='../images/483.gif' />");
+$("#clockWrapper").css("background","#fff");
+function myTimer(){
+	$(".clock > .tileType").fadeIn();
+    var d=new Date();
+    var t=d.toLocaleTimeString("en-US");
+    $("#clockWrapper h2").html(t);
+    $("#clockWrapper").css("background","none");
+}
 
 
+/*Small Text Tile Update */
 
-
-
-
-
+$(".textSnippet > .tileType").fadeIn();
 
 
 

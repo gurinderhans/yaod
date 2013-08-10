@@ -107,6 +107,7 @@ h1,p{
     bottom:3%;
     z-index:1;
     font-family:"Open Sans", sans-serif;
+    display:none;
 }
 [data-sizex="2"] span{
 	left: 3%;
@@ -169,6 +170,12 @@ h1,p{
 .image img{
 	display: block;
 	margin:8% auto;
+}
+/*Tile Icons*/
+.tileIcon{
+	position:absolute;
+	top: 10%;
+	left: 6%;
 }
 
 

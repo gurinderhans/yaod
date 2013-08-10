@@ -28,6 +28,7 @@
 					<span class="tileType">Calendar</span>
 					<h1></h1>
 					<h3></h3>
+					<img class="tileIcon" src="images/calendarIcon.png" />
 					<p class="event" id="1">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
                     <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
                     <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">10:30PM - 10:50PM</span></p>
@@ -58,7 +59,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<script src="js/dashboard.js" type="text/javascript"></script>
 		<script src="js/fileUpload.js" type="text/javascript"></script>
-        <script src="js/clock.js" type="text/javascript"></script>
         <script src="js/tileUpdater.js" type="text/javascript"></script>
 	</body>
 </html>
