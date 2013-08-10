@@ -1,3 +1,28 @@
+/*Updating the image Tile*/
+//fire the image update func
+var b=setInterval(function(){updateImage()},20100);
+var imageToRequest = 0;
+function updateImage(){
+	$.post('../php/imageReader.php',{ imageReq: imageToRequest }, function(data) {
+		if(data != ''){
+			$(".image #smallIMG").fadeOut('fast', function() {
+				// Animation complete.
+				$(this).attr("src",data);
+				$(this).css("margin","0");
+			}).delay(100).fadeIn();
+		}
+	});
+	if(imageToRequest > 2){
+		imageToRequest = 0;
+	} else{
+		imageToRequest++;
+	}
+}
+
+
+
+
+
 /*Updating the calendar*/
 //get the day
 var d = new Date();
@@ -24,14 +49,13 @@ function updateDate(){
 updateDate();
 updateDay();
 var numCalendarEvents = $(".calendar p").size();
-$(".calendar > #1").show().delay(8000).hide("slide", { direction: "left" }, 200);
+$(".calendar > #1").show().delay(12000).hide("slide", { direction: "left" }, 200);
 var nextEvent = 2;
 var dirShow = "";
 var dirHide = "";
-var randomNum;
-var a=setInterval(function(){updateCalendar()},8400); 
+var a=setInterval(function(){updateCalendar()},12400); 
 function updateCalendar(){
-    randomNum = Math.floor(Math.random()*2);
+    var randomNum = Math.floor(Math.random()*2);
     if(randomNum === 1){
         dirShow = "left";
         dirHide = "right";
@@ -42,10 +66,30 @@ function updateCalendar(){
     if(nextEvent > numCalendarEvents){
         nextEvent = 1;
     }
-    $(".calendar > #"+nextEvent).show("slide", { direction: ""+dirShow+"" }, 200).delay(8000).hide("slide", { direction: ""+dirHide+"" }, 200);
+    $(".calendar > #"+nextEvent).show("slide", { direction: ""+dirShow+"" }, 200).delay(12000).hide("slide", { direction: ""+dirHide+"" }, 200);
     if(nextEvent == numCalendarEvents){
         nextEvent = 1;
     } else{
         nextEvent = nextEvent + 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

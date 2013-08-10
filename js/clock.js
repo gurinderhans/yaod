@@ -1,5 +1,5 @@
 var myVar=setInterval(function(){myTimer()},1000);
-$("#clockWrapper h2").html("<img src='http://gurinderhans.kd.io/yaod/images/483.gif' />");
+$("#clockWrapper h2").html("<img src='../images/483.gif' />");
 $("#clockWrapper").css("background","#fff");
 function myTimer(){
     var d=new Date();

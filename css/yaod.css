@@ -88,7 +88,6 @@ h1,p{
     padding:0;
 	float:left;
 	font-size:1.2em;
-    text-align:left;
     position:relative;
 }
 .sortable li:hover{
@@ -120,6 +119,7 @@ h1,p{
 	font-size: 0.7em;
 	margin:3% auto;
 	width: 90%;
+	line-height:1.5;
 }
 /*Clock tile*/
 #clockWrapper{
@@ -167,12 +167,11 @@ h1,p{
 
 /*Just Image tile*/
 .image img{
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
+	display: block;
+	margin:8% auto;
 }
+
+
 /*Group Title Styles*/
 .groupTitle{
 	display:table;

@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
  
 <html lang="en">
@@ -16,10 +19,6 @@
                     <span class="tileType">Text</span>
                     <p class="smallTileP">yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more.</p>
                 </li>
-				<li data-sizex="1" data-sizey="1" class="tile green image">
-                    <span class="tileType">Image</span>
-                    <img class="smallTileImg" src="http://0.tqn.com/d/organicgardening/1/0/c/2/-/-/sunflower.jpg" />
-                </li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
                     <span class="tileType">Clock</span>
@@ -31,11 +30,14 @@
 					<h3></h3>
 					<p class="event" id="1">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
                     <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
-                    <p class="event" id="3">Learn git on<br />codeschool<br /><span class="timeDue">10:30PM - 10:50PM</span></p>
+                    <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">10:30PM - 10:50PM</span></p>
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
-				<li data-sizex="1" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="1" data-sizey="1" class="tile green image">
+					<span class="tileType">Image</span>
+					<img id="smallIMG" src="images/photoIcon.png" />
+				</li>
 			</ul>
 			<div class="groupTitle"><span>Group 2</span></div>
 			<ul class="sortable droptrue">
