@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="droparea">
-			<div class="groupTitle"><span>Home</span></div>
+			<div class="groupTitle"><span contenteditable="false">Home</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
@@ -39,7 +39,7 @@
 					<img class="tileIcon" src="images/photoIcon.png" />
 				</li>
 			</ul>
-			<div class="groupTitle"><span>Group 2</span></div>
+			<div class="groupTitle"><span contenteditable="false">Group 2</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green"></li>
