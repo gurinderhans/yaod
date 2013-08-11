@@ -109,6 +109,10 @@ h1,p{
     font-family:"Open Sans", sans-serif;
     display:none;
 }
+.tileType img{
+	width:16px;
+	height:16px;
+}
 [data-sizex="2"] span{
 	left: 3%;
 }
@@ -121,10 +125,10 @@ h1,p{
 	margin:3% auto;
 	width: 90%;
 	line-height:1.5;
+	display:none;
 }
 /*Clock tile*/
 #clockWrapper{
-    border:2px solid white;
     border-radius:100%;
     width:80%;
     height:80%;
@@ -177,9 +181,14 @@ h1,p{
 	top: 10%;
 	left: 6%;
 }
+/*text tile Icon */
+.textSnippet > img{
+	display:block;
+	margin:10% auto;
+}
 
 
-/*Group Title Styles*/
+/*Grouped Title Styles*/
 .groupTitle{
 	display:table;
 	background:#b84c3d;

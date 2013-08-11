@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
  
 <html lang="en">
@@ -16,16 +13,17 @@
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple textSnippet">
-                    <span class="tileType">Text</span>
-                    <p class="smallTileP">yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more.</p>
+                    <span class="tileType"><img src="images/textSnippetIcon.png" /></span>
+                    <img src="images/textSnippetIcon.png" />
+                    <p>yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more. You can drag tiles, drop them, rearrange them. Also they automatically update so you always get the latest information.</p>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
-                    <span class="tileType">Clock</span>
+                    <span class="tileType"><img src="images/clockIcon2.png" /></span>
                     <div id="clockWrapper"><h2></h2></div>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
-					<span class="tileType">Calendar</span>
+					<span class="tileType"><img src="images/calendarIcon.png" /></span>
 					<h1></h1>
 					<h3></h3>
 					<img class="tileIcon" src="images/calendarIcon.png" />
@@ -36,7 +34,7 @@
 				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
-					<span class="tileType">Image</span>
+					<span class="tileType"><img src="images/photoIcon.png" /></span>
 					<img id="smallIMG" src="images/photoIcon.png" />
 				</li>
 			</ul>

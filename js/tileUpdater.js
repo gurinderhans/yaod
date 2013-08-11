@@ -1,19 +1,22 @@
 /*Updating the image Tile*/
 //fire the image update func
+
 var b=setInterval(function(){updateImage()},20100);
 var imageToRequest = 0;
+updateImage();
 function updateImage(){
-	$.post('../php/imageReader.php',{ imageReq: imageToRequest }, function(data) {
+	$.post("../php/imageReader.php",{ imageReq: imageToRequest }, function(data) {
 		if(data != ''){
-			$(".image #smallIMG").fadeOut('fast', function() {
+			$(".image #smallIMG").delay(4000).fadeOut('fast', function() {
 				// Animation complete.
+				console.log(56);
 				$(".image > .tileType").fadeIn();
 				$(this).attr("src",data);
 				$(this).css("margin","0");
 			}).delay(100).fadeIn();
 		}
 	});
-	if(imageToRequest > 2){
+	if(imageToRequest > 2){/*fix this*/
 		imageToRequest = 0;
 	} else{
 		imageToRequest++;
@@ -61,7 +64,6 @@ function startCalendarUpdate(){
 	$(".calendar > #1").show("slide", { direction: "right" }, 200).delay(12000).hide("slide", { direction: "left" }, 200);
 	var a=setInterval(function(){
 		updateCalendar();
-		console.log("updateCalendar();");
 	},12400);
 }
 function updateCalendar(){
@@ -89,20 +91,35 @@ function updateCalendar(){
 /*Running the clock */
 
 var c=setInterval(function(){myTimer()},1000);
-$("#clockWrapper h2").html("<img src='../images/483.gif' />");
-$("#clockWrapper").css("background","#fff");
+$("#clockWrapper h2").html("<img src='../images/clockIcon2.png' />");
+//$("#clockWrapper").css("background","#fff");
 function myTimer(){
 	$(".clock > .tileType").fadeIn();
     var d=new Date();
     var t=d.toLocaleTimeString("en-US");
     $("#clockWrapper h2").html(t);
-    $("#clockWrapper").css("background","none");
+    $("#clockWrapper").css("border","2px solid white");
 }
 
 
 /*Small Text Tile Update */
-
-$(".textSnippet > .tileType").fadeIn();
+updateTextSnippet();
+var d=setInterval(function(){updateTextSnippet()},20000);
+function updateTextSnippet(){
+	//get the text seperate into arrays only if longer than suppose to be :)
+	//but first check if there is any text LOL
+	var textIs = $(".textSnippet p").size();
+	var textInP = $(".textSnippet p").text();
+	if(textIs > 0 && textInP != null){//there is text
+		//newText
+		var newText = textInP.substring(0,123)+"...";
+		$(".textSnippet > img").delay(2700).fadeOut("fast", function(){
+			$(".textSnippet p").html(newText).show("slide", { direction: "left" }, 200);
+			$(".textSnippet .tileType").fadeIn();
+		});
+		
+	}
+}
 
 
 
