@@ -170,23 +170,16 @@ h1,p{
 }
 
 
-/*Just Image tile*/
-.image img{
-	display: block;
-	margin:8% auto;
-}
 /*Tile Icons*/
-.tileIcon{
+[data-sizex="1"] .tileIcon{
+	display:block;
+	margin: 10% auto;
+}
+[data-sizex="2"] .tileIcon{
 	position:absolute;
 	top: 10%;
 	left: 6%;
 }
-/*text tile Icon */
-.textSnippet > img{
-	display:block;
-	margin:10% auto;
-}
-
 
 /*Grouped Title Styles*/
 .groupTitle{

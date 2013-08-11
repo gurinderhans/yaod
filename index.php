@@ -14,12 +14,13 @@
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple textSnippet">
                     <span class="tileType"><img src="images/textSnippetIcon.png" /></span>
-                    <img src="images/textSnippetIcon.png" />
+                    <img class="tileIcon" src="images/textSnippetIcon.png" />
                     <p>yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more. You can drag tiles, drop them, rearrange them. Also they automatically update so you always get the latest information.</p>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
                     <span class="tileType"><img src="images/clockIcon2.png" /></span>
+                    <img class="tileIcon" src="images/clockIcon2.png" />
                     <div id="clockWrapper"><h2></h2></div>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
@@ -35,7 +36,7 @@
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
 					<span class="tileType"><img src="images/photoIcon.png" /></span>
-					<img id="smallIMG" src="images/photoIcon.png" />
+					<img class="tileIcon" src="images/photoIcon.png" />
 				</li>
 			</ul>
 			<div class="groupTitle"><span>Group 2</span></div>

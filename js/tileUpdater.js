@@ -1,13 +1,12 @@
 /*Updating the image Tile*/
 //fire the image update func
-
 var b=setInterval(function(){updateImage()},20100);
 var imageToRequest = 0;
 updateImage();
 function updateImage(){
 	$.post("../php/imageReader.php",{ imageReq: imageToRequest }, function(data) {
 		if(data != ''){
-			$(".image #smallIMG").delay(4000).fadeOut('fast', function() {
+			$(".image .tileIcon").delay(4000).fadeOut('fast', function() {
 				// Animation complete.
 				console.log(56);
 				$(".image > .tileType").fadeIn();
@@ -89,16 +88,15 @@ function updateCalendar(){
 
 
 /*Running the clock */
-
 var c=setInterval(function(){myTimer()},1000);
-$("#clockWrapper h2").html("<img src='../images/clockIcon2.png' />");
-//$("#clockWrapper").css("background","#fff");
 function myTimer(){
 	$(".clock > .tileType").fadeIn();
-    var d=new Date();
-    var t=d.toLocaleTimeString("en-US");
-    $("#clockWrapper h2").html(t);
-    $("#clockWrapper").css("border","2px solid white");
+	$(".clock > .tileIcon").fadeOut("fast", function(){
+		var d=new Date();
+		var t=d.toLocaleTimeString("en-US");
+		$("#clockWrapper h2").html(t);
+		$("#clockWrapper").css("border","2px solid white");
+	});
 }
 
 
