@@ -7,7 +7,7 @@
 	function updateImage(){
 		$.post("../php/imageReader.php",{ imageReq: imageToRequest }, function(data) {
 			if(data != ''){
-				$(".image .tileIcon").delay(4000).fadeOut('fast', function() {
+				$(".image > .tileIcon").delay(4000).fadeOut('fast', function() {
 					// Animation complete.
 					$(".image > .tileType").fadeIn();
 					$(this).attr("src",data);
@@ -118,4 +118,14 @@
 		
 		}
 	}
+	
+	/*todo Tile NOT UPDATE JUST GET*/
+	var e = setTimeout(function(){getToDos()},3000);
+	function getToDos(){
+		$(".todo > .tileIcon").fadeOut();
+		$(".todo > .tileType").fadeIn();
+	}
+	/*todo Tile Update Items when done*/
+	
+	
 })(jQuery)

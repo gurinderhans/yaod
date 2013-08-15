@@ -19,8 +19,8 @@
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
-                    <span class="tileType"><img src="images/clockIcon2.png" /></span>
-                    <img class="tileIcon" src="images/clockIcon2.png" />
+                    <span class="tileType"><img src="images/clockIcon.png" /></span>
+                    <img class="tileIcon" src="images/clockIcon.png" />
                     <div id="clockWrapper"><h2></h2></div>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
@@ -29,15 +29,36 @@
 					<h3></h3>
 					<img class="tileIcon" src="images/calendarIcon.png" />
 					<p class="event" id="1">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
-                    <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">12:30AM - 10:00PM</span></p>
-                    <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">10:30PM - 10:50PM</span></p>
+                    <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">Tommorow</span></p>
+                    <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">All Day</span></p>
 				</li>
-				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="1" data-sizey="1" class="tile orange todo">
+					<span class="tileType"><img src="images/todoIcon.png" /></span>
+					<img class="tileIcon" src="images/todoIcon.png" />
+					<!--<div id="todoWrapper">
+						<h3>Github</h3>
+						<table border="0">
+							<tr>
+								<td><input class="todoCheck" type="checkbox" /></td>
+								<td>row 1</td>
+							</tr>
+							<tr>
+								<td><input class="todoCheck" type="checkbox" /></td>
+								<td>row 2</td>
+							</tr>
+							<tr>
+								<td><input class="todoCheck" type="checkbox" /></td>
+								<td>row 3</td>
+							</tr>
+						</table>
+					</div>-->
+				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
 					<span class="tileType"><img src="images/photoIcon.png" /></span>
 					<img class="tileIcon" src="images/photoIcon.png" />
 				</li>
+				<li data-sizex="1" data-sizey="1" class="tile orange"></li>
 			</ul>
 			<div class="groupTitle"><span contenteditable="false">Group 2</span></div>
 			<ul class="sortable droptrue">
