@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>yaod</title>
+		<title>yaod (yet another online dashboard)</title>
 		<link rel="stylesheet" href="css/yaod.css" />
 	</head>
 	<body>
@@ -35,23 +35,6 @@
 				<li data-sizex="1" data-sizey="1" class="tile orange todo">
 					<span class="tileType"><img src="images/todoIcon.png" /></span>
 					<img class="tileIcon" src="images/todoIcon.png" />
-					<!--<div id="todoWrapper">
-						<h3>Github</h3>
-						<table border="0">
-							<tr>
-								<td><input class="todoCheck" type="checkbox" /></td>
-								<td>row 1</td>
-							</tr>
-							<tr>
-								<td><input class="todoCheck" type="checkbox" /></td>
-								<td>row 2</td>
-							</tr>
-							<tr>
-								<td><input class="todoCheck" type="checkbox" /></td>
-								<td>row 3</td>
-							</tr>
-						</table>
-					</div>-->
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
@@ -69,7 +52,6 @@
 				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
-				
 			</ul>
 			<br />
 			<br />

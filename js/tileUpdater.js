@@ -125,7 +125,7 @@
 		$(".todo > .tileIcon").fadeOut();
 		$(".todo > .tileType").fadeIn();
 	}
-	/*todo Tile Update Items when done*/
+	/*ToDo Tile Update Items when done*/
 	
 	
 })(jQuery)
