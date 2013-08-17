@@ -129,17 +129,20 @@ h1,p{
 }
 /*Clock tile*/
 #clockWrapper{
-    border-radius:100%;
     width:80%;
     height:80%;
     text-align:center;
     display:table;
     margin:10% auto;
 }
-#clockWrapper h2{
+#clockWrapper h1{
     display:table-cell;
     vertical-align:middle;
     font-weight:100;
+    font-size:3em;
+}
+#hour{
+	font-weight:bold;
 }
 /*Calendar tile*/
 .calendar h1{

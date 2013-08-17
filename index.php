@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="droparea">
-			<div class="groupTitle"><span contenteditable="false">Home</span></div>
+			<div class="groupTitle"><span>Home</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
@@ -21,7 +21,7 @@
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
                     <span class="tileType"><img src="images/clockIcon.png" /></span>
                     <img class="tileIcon" src="images/clockIcon.png" />
-                    <div id="clockWrapper"><h2></h2></div>
+                    <div id="clockWrapper"><h1></h1></div>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
 					<span class="tileType"><img src="images/calendarIcon.png" /></span>
@@ -43,7 +43,7 @@
 				</li>
 				<li data-sizex="1" data-sizey="1" class="tile orange"></li>
 			</ul>
-			<div class="groupTitle"><span contenteditable="false">Group 2</span></div>
+			<div class="groupTitle"><span>Group 2</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green"></li>

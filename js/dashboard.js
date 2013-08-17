@@ -12,8 +12,4 @@ $(function(){
 		dropOnEmpty: false
 	});
 	$( ".sortable" ).disableSelection();
-	//make Group Title Editable
-	$(".groupTitle span").click(function(){
-		$(this).attr("contenteditable", "true");
-	});
 });

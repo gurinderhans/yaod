@@ -99,9 +99,11 @@
 		$(".clock > .tileType").fadeIn();
 		$(".clock > .tileIcon").fadeOut("fast", function(){
 			var d=new Date();
-			var t=d.toLocaleTimeString("en-US");
-			$("#clockWrapper h2").html(t);
-			$("#clockWrapper").css("border","2px solid white");
+			var t=d.toLocaleTimeString("en-US", {hour12: false});
+			t=t.split(":");
+			var hour = t[0];
+			var minute = t[1];
+			$("#clockWrapper h1").html('<span id="hour">'+hour+'</span><span id="minute">:'+minute+'</span>');
 		});
 	}
 
