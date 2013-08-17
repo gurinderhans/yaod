@@ -1,21 +1,27 @@
 (function ($) {
 	/*Updating the image Tile*/
-	//fire the image update func
+	//fire the image update function
 	var b=setInterval(function(){updateImage()},20100);
 	var imageToRequest = 0;
 	updateImage();
 	function updateImage(){
+		var numImagesTotal = 0;//console gives error beacuse this variable gets a value after the function is run once when request is completed
 		$.post("../php/imageReader.php",{ imageReq: imageToRequest }, function(data) {
 			if(data != ''){
+				var splittedData = data.split(",");
+				numImagesTotal = splittedData[0];//gets the value here when request is complete
+				var imageURL = splittedData[1];
 				$(".image > .tileIcon").delay(4000).fadeOut('fast', function() {
 					// Animation complete.
 					$(".image > .tileType").fadeIn();
-					$(this).attr("src",data);
+					$(this).attr("src",imageURL);
 					$(this).css("margin","0");
 				}).delay(100).fadeIn();
+			} else{
+				alert("Failed to get images. Try refreshing the page and see if it helps otherwise contact support for assistance");
 			}
 		});
-		if(imageToRequest > 2){/*fix this*/
+		if(imageToRequest > numImagesTotal){
 			imageToRequest = 0;
 		} else{
 			imageToRequest++;
@@ -67,21 +73,21 @@
 	}
 	function updateCalendar(){
 		var randomNum = Math.floor(Math.random()*2);
-		if(randomNum === 1){
+		if(randomNum === 1){/*this is to..*/
 		    dirShow = "left";
 		    dirHide = "right";
 		} else if(randomNum === 0){
 		    dirShow = "right";
 		    dirHide = "left";
-		}
+		}/*... randomize the direction to hide and show*/
 		if(nextEvent > numCalendarEvents){
 		    nextEvent = 1;
-		}
+		}/*reset if number greater than calendar events. I am doing this for a non-rememberable reason at the moment but its important*/
 		$(".calendar > #"+nextEvent).show("slide", { direction: ""+dirShow+"" }, 200).delay(12000).hide("slide", { direction: ""+dirHide+"" }, 200);
-		if(nextEvent == numCalendarEvents){
+		if(nextEvent == numCalendarEvents){/*Doing the same thing*/
 		    nextEvent = 1;
 		} else{
-		    nextEvent = nextEvent + 1;
+		    nextEvent = nextEvent + 1;//if not greater than increment it
 		}
 	}
 

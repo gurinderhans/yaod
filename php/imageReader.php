@@ -21,6 +21,7 @@ while (($file = readdir($imageDir)) !== false){
 	}
 
 }
+echo $i.",";
 echo $displayImages[$imageRequested];
 
 
