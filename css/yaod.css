@@ -171,6 +171,35 @@ h1,p{
 	font-size:0.7em;
 	font-weight:bold;
 }
+/*File Icons and file tiles */
+[data-sizex="1"] .fileIcon{
+	display:block;
+	margin:5% auto 0 auto;
+}
+[data-sizex="1"] .fileInfoWrapper h3{
+	font-size:1em;
+	font-weight:700;
+	text-align:center;
+	margin:0;
+}
+[data-sizex="2"] .fileInfoWrapper h3{
+	font-size:1em;
+	font-weight:700;
+	margin:0;
+}
+.fileInfoWrapper div{
+	margin:5% 0 0 0;
+}
+.fileInfoWrapper .left{
+	float:left;
+	width:49%;
+	text-align:center;
+}
+.fileInfoWrapper .right{
+	float:right;
+	width:49%;
+	text-align:left;
+}
 
 /*Tile Icons*/
 [data-sizex="1"] .tileIcon{

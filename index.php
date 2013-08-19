@@ -13,43 +13,62 @@
 				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple textSnippet">
-                    <span class="tileType"><img src="images/textSnippetIcon.png" /></span>
-                    <img class="tileIcon" src="images/textSnippetIcon.png" />
+                    <span class="tileType"><img src="images/icons/tileIcons/textSnippetIcon.png" /></span>
+                    <img class="tileIcon" src="images/icons/tileIcons/textSnippetIcon.png" />
                     <p>yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more. You can drag tiles, drop them, rearrange them. Also they automatically update so you always get the latest information.</p>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
-                    <span class="tileType"><img src="images/clockIcon.png" /></span>
-                    <img class="tileIcon" src="images/clockIcon.png" />
+                    <span class="tileType"><img src="images/icons/tileIcons/clockIcon.png" /></span>
+                    <img class="tileIcon" src="images/icons/tileIcons/clockIcon.png" />
                     <div id="clockWrapper"><h1></h1></div>
                 </li>
 				<li data-sizex="2" data-sizey="1" class="tile purple calendar">
-					<span class="tileType"><img src="images/calendarIcon.png" /></span>
+					<span class="tileType"><img src="images/icons/tileIcons/calendarIcon.png" /></span>
 					<h1></h1>
 					<h3></h3>
-					<img class="tileIcon" src="images/calendarIcon.png" />
+					<img class="tileIcon" src="images/icons/tileIcons/calendarIcon.png" /><!--make this like image Tile all dynamic and stuff-->
 					<p class="event" id="1">Work on yaod<br />project<br /><span class="timeDue">5:30PM - 6:00PM</span></p>
                     <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">Tommorow</span></p>
                     <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">All Day</span></p>
 				</li>
 				<li data-sizex="1" data-sizey="1" class="tile orange todo">
-					<span class="tileType"><img src="images/todoIcon.png" /></span>
-					<img class="tileIcon" src="images/todoIcon.png" />
+					<span class="tileType"><img src="images/icons/tileIcons/todoIcon.png" /></span>
+					<img class="tileIcon" src="images/icons/tileIcons/todoIcon.png" />
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
-					<span class="tileType"><img src="images/photoIcon.png" /></span>
-					<img class="tileIcon" src="images/photoIcon.png" />
+					<span class="tileType"><img src="images/icons/tileIcons/photoIcon.png" /></span>
+					<img class="tileIcon" src="images/icons/tileIcons/photoIcon.png" />
 				</li>
 				<li data-sizex="1" data-sizey="1" class="tile orange"></li>
 			</ul>
-			<div class="groupTitle"><span>Group 2</span></div>
+			<div class="groupTitle"><span>Documents</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
-				<li data-sizex="1" data-sizey="1" class="tile green"></li>
-				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile orange word"></li>
+				<li data-sizex="1" data-sizey="1" class="tile blueishgreen word">
+					<div class="fileInfoWrapper">
+						<img class="fileIcon" src="images/icons/fileIcons/documentIcon.png" />	
+						<h3>document.odt</h3>
+					</div>
+				</li>
+				<li data-sizex="1" data-sizey="1" class="tile green excel">
+					<div class="fileInfoWrapper">
+						<img class="fileIcon" src="images/icons/fileIcons/excelIcon.png" />	
+						<h3>stuff.ods</h3>
+					</div>
+				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
-				<li data-sizex="2" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile red pres">
+					<div class="fileInfoWrapper">
+						<div class="left"><img src="images/icons/fileIcons/powerpointIcon.png" /></div>
+						<div class="right">
+							<h3>slides.odp</h3>
+							<p>Size: 24.5 KB</p>
+							<p>Uploaded: July 13, 2013</p>
+						</div>
+					</div>
+				</li>
 				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple"></li>
 			</ul>

@@ -99,7 +99,7 @@
 		$(".clock > .tileType").fadeIn();
 		$(".clock > .tileIcon").fadeOut("fast", function(){
 			var d=new Date();
-			var t=d.toLocaleTimeString("en-US", {hour12: false});
+			var t=d.toLocaleTimeString("en-US");
 			t=t.split(":");
 			var hour = t[0];
 			var minute = t[1];
@@ -134,6 +134,10 @@
 		$(".todo > .tileType").fadeIn();
 	}
 	/*ToDo Tile Update Items when done*/
+	
+	
+	
+	/*fileIcons update*/
 	
 	
 })(jQuery)
