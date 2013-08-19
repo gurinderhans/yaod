@@ -5,7 +5,7 @@
 	var imageToRequest = 0;
 	updateImage();
 	function updateImage(){
-		var numImagesTotal = 0;//console gives error beacuse this variable gets a value after the function is run once when request is completed
+		var numImagesTotal = 0;//reason for creating -> console gives error beacuse this variable gets a value after the function is run and when request is completed
 		$.post("../php/imageReader.php",{ imageReq: imageToRequest }, function(data) {
 			if(data != ''){
 				var splittedData = data.split(",");
@@ -17,19 +17,45 @@
 					$(this).attr("src",imageURL);
 					$(this).css("margin","0");
 				}).delay(100).fadeIn();
+				if(imageToRequest == (numImagesTotal-1)){
+					imageToRequest = 0;
+				} else{
+					imageToRequest++;
+				}
 			} else{
-				alert("Failed to get images. Try refreshing the page and see if it helps otherwise contact support for assistance");
+				alert("Failed to get images. LOL");
 			}
 		});
-		if(imageToRequest > numImagesTotal){
-			imageToRequest = 0;
-		} else{
-			imageToRequest++;
-		}
 	}
 
-
-
+	/*updating file Icon*/
+	var f=setInterval(function(){updateFile()},1100);
+	var fileToRequest = 0;
+	function updateFile(){
+		var numDocFiles = 0;//created for same reason as in image update function
+		$.post("../php/docsReader.php", {fileReqed: fileToRequest}, function(data){
+			var splittedData = data.split(":,:");
+			var fileName = splittedData[0];
+			var fileSize = splittedData[1];
+			var fileLastChanged = splittedData[3];
+			var fileType = splittedData[4];
+			if(fileType == "wordFile"){
+				//iamges url = word file
+			} else if(fileType == "excelFile"){
+			
+			} else if(fileType == "presFile"){
+				
+			} else{
+				//unknown file img url
+			}
+			numDocFiles = splittedData[5];
+			if(fileToRequest == (numDocFiles-1)){//fix the 2
+				fileToRequest = 0;
+			} else{
+				fileToRequest++;
+			}
+		});
+	}
 	/*Updating the calendar*/
 	//get the day
 	var d = new Date();
@@ -134,10 +160,7 @@
 		$(".todo > .tileType").fadeIn();
 	}
 	/*ToDo Tile Update Items when done*/
-	
-	
-	
-	/*fileIcons update*/
+
 	
 	
 })(jQuery)

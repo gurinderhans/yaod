@@ -46,25 +46,25 @@
 			<div class="groupTitle"><span>Documents</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile orange word"></li>
-				<li data-sizex="1" data-sizey="1" class="tile blueishgreen word">
+				<li data-sizex="1" data-sizey="1" class="tile blueishgreen"><!--
 					<div class="fileInfoWrapper">
 						<img class="fileIcon" src="images/icons/fileIcons/documentIcon.png" />	
 						<h3>document.odt</h3>
 					</div>
-				</li>
-				<li data-sizex="1" data-sizey="1" class="tile green excel">
+				--></li>
+				<li data-sizex="1" data-sizey="1" class="tile green"><!--
 					<div class="fileInfoWrapper">
 						<img class="fileIcon" src="images/icons/fileIcons/excelIcon.png" />	
 						<h3>stuff.ods</h3>
 					</div>
-				</li>
+				--></li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
-				<li data-sizex="2" data-sizey="1" class="tile red pres">
+				<li data-sizex="2" data-sizey="1" class="tile red file">
 					<div class="fileInfoWrapper">
 						<div class="left"><img src="images/icons/fileIcons/powerpointIcon.png" /></div>
 						<div class="right">
 							<h3>slides.odp</h3>
-							<p>Size: 24.5 KB</p>
+							<p>Size: <span class="size">2.5 KB</span></p>
 							<p>Uploaded: July 13, 2013</p>
 						</div>
 					</div>
