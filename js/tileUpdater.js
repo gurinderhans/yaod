@@ -29,24 +29,28 @@
 	}
 
 	/*updating file Icon*/
-	var f=setInterval(function(){updateFile()},1100);
+	var f=setInterval(function(){updateFile()},10100);
 	var fileToRequest = 0;
 	function updateFile(){
 		var numDocFiles = 0;//created for same reason as in image update function
+		var fileImageUrl;
 		$.post("../php/docsReader.php", {fileReqed: fileToRequest}, function(data){
 			var splittedData = data.split(":,:");
 			var fileName = splittedData[0];
 			var fileSize = splittedData[1];
 			var fileLastChanged = splittedData[3];
 			var fileType = splittedData[4];
+			//["wordDocument.odt", "8.86 KB", "files/wordDocument.odt", "August 19 2013 14:43:47.", "wordFile", "4"] 
 			if(fileType == "wordFile"){
 				//iamges url = word file
+				fileImageUrl = "images/icons/fileIcons/documentIcon.png";
 			} else if(fileType == "excelFile"){
-			
+				fileImageUrl = "images/icons/fileIcons/excelIcon.png";
 			} else if(fileType == "presFile"){
-				
-			} else{
+				fileImageUrl = "images/icons/fileIcons/powerpointIcon.png";
+			} else if(fileType == "unknown"){
 				//unknown file img url
+				fileImageUrl = "images/icons/fileIcons/txtIcon.png";
 			}
 			numDocFiles = splittedData[5];
 			if(fileToRequest == (numDocFiles-1)){//fix the 2
@@ -54,6 +58,14 @@
 			} else{
 				fileToRequest++;
 			}
+			//changing info
+			$(".file > .fileInfoWrapper > div.left, .file > .fileInfoWrapper > div.right").fadeOut('fast', function(){
+				$(".file > .fileInfoWrapper > div.left").children("img").attr("src", fileImageUrl);
+				$(".file > .fileInfoWrapper > div.right").children("h3").text(fileName);
+				$(".file > .fileInfoWrapper > div.right").children("p").find(".size").text(fileSize);
+				$(".file > .fileInfoWrapper > div.right").children("p").find(".uploaded").text(fileLastChanged);
+			});
+			$(".file > .fileInfoWrapper > div.left, .file > .fileInfoWrapper > div.right").delay(100).fadeIn();
 		});
 	}
 	/*Updating the calendar*/

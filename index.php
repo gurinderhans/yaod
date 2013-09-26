@@ -65,7 +65,7 @@
 						<div class="right">
 							<h3>slides.odp</h3>
 							<p>Size: <span class="size">2.5 KB</span></p>
-							<p>Uploaded: July 13, 2013</p>
+							<p>Uploaded: <span class="uploaded">July 13, 2013</span></p>
 						</div>
 					</div>
 				</li>

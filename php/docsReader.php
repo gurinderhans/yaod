@@ -35,12 +35,22 @@ while (($file = readdir($dir)) !== false){
 			$fileType = "excelFile";
 		} elseif(in_array($ext,$presFilesArray) == true){
 			$fileType = "presFile";
+		} else{
+			$fileType = "unknown";
 		}
 		$toFile = "../files/" . $file;
 		$filePathfromIndex = "files/" . $file;
 		$size = formatBytes(filesize($toFile));
 		$dateModed = date("F d Y H:i:s.", filectime($toFile));
-		$fileNameArray[$i] = $file;
+		$dateModed = explode(' ', $dateModed);
+		$dateModed = "".$dateModed[0]." ".$dateModed[1].", ".$dateModed[2]."";
+		if(strlen($file) > 16){
+			$file = explode(".",$file);
+			$fileName = $file[0];
+		} else{
+			$fileName = $file;
+		}
+		$fileNameArray[$i] = $fileName;
 		$fileSizeArray[$i] = $size;
 		$filePathArray[$i] = $filePathfromIndex;
 		$fileModedTimeArray[$i] = $dateModed;

@@ -184,7 +184,7 @@ h1,p{
 }
 [data-sizex="2"] .fileInfoWrapper h3{
 	font-size:1em;
-	font-weight:700;
+	font-weight:300;
 	margin:0;
 }
 .fileInfoWrapper div{
@@ -192,13 +192,17 @@ h1,p{
 }
 .fileInfoWrapper .left{
 	float:left;
-	width:49%;
-	text-align:center;
+	width:42%;
+	text-align:right;
 }
 .fileInfoWrapper .right{
 	float:right;
-	width:49%;
+	width:54%;
 	text-align:left;
+}
+.fileInfoWrapper .right > p{
+	font-size:0.7em;
+	font-weight:700;
 }
 
 /*Tile Icons*/
