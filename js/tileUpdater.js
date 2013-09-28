@@ -165,14 +165,47 @@
 		}
 	}
 	
+	/*Localstorage Get todoData*/
+	getFromlocalstorage = function() {
+        if (localStorage.getItem('todoData')) {
+            list.innerHTML = localStorage.getItem('todoData');
+        } else{
+        	$("#list p").prepend("<span class='checkbox unchecked'>&#9744;</span>");
+        }
+    };
+    /* Clear and save to localstorage the todoData*/
+    saveTolocalstorage = function() {
+        localStorage.clear();
+        console.log('cleared ');
+        localStorage.setItem('todoData', list.innerHTML);
+        console.log(list.innerHTML);
+    };
 	/*todo Tile NOT UPDATE JUST GET*/
-	var e = setTimeout(function(){getToDos()},3000);
+	var e = setTimeout(function(){getToDos()},3000);/*Ignoring this for now*/
 	function getToDos(){
 		$(".todo > .tileIcon").fadeOut();
-		$(".todo > .tileType").fadeIn();
+		$(".todo > .tileType").fadeIn(function(){
+			$("#list").fadeIn();
+		});
 	}
-	/*ToDo Tile Update Items when done*/
-
+	function todosUpdate(){
+		var list = document.getElementById('list');
+		getFromlocalstorage(); //call the information
+		/*ToDo Tile Update Items when done*/
+		$(".checkbox").click(function(){
+			$(this).toggleClass('checked unchecked');
+			if ($(this).hasClass('checked')) {
+		        $(this).html("&#9745;");
+		        $(this).siblings(".todoName").css({"text-decoration": "line-through", "color":"rgb(223, 223, 223)"});
+		    } else {
+		    	$(this).siblings(".todoName").css({"text-decoration": "none", "color":"#fff"});
+		        $(this).html("&#9744;");
+		    }
+		    saveTolocalstorage();
+		});
+	}
+	//run the todos update function above
+	todosUpdate();
 	
 	
 })(jQuery)

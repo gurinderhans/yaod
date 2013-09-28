@@ -35,6 +35,14 @@
 				<li data-sizex="1" data-sizey="1" class="tile orange todo">
 					<span class="tileType"><img src="images/icons/tileIcons/todoIcon.png" /></span>
 					<img class="tileIcon" src="images/icons/tileIcons/todoIcon.png" />
+					<!--start-->
+					<div id="list">
+						<p><span class="todoName">Some Work</span></p>
+						<p><span class="todoName">Other Work 2</span></p>
+						<p><span class="todoName">Added Work 3</span></p>
+						<p><span class="todoName">Finish other work</span></p>
+						<p><span class="todoName">Plus Work 4</span></p>
+					</div>
 				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
