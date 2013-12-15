@@ -10,13 +10,26 @@
 		<div id="droparea">
 			<div class="groupTitle"><span>Home</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="2" data-sizey="1" class="tile blueishgreen"></li>
-				<li data-sizex="2" data-sizey="1" class="tile darkPink"></li>
+				<li data-sizex="3" data-sizey="2" class="tile blueishgreen"></li>
+				<li data-sizex="2" data-sizey="2" class="tile darkPink"></li>
 				<li data-sizex="1" data-sizey="1" class="tile purple textSnippet">
                     <span class="tileType"><img src="images/icons/tileIcons/textSnippetIcon.png" /></span>
                     <img class="tileIcon" src="images/icons/tileIcons/textSnippetIcon.png" />
                     <p>yaod(yet another online dashboard) is yet another online dashboard for saving text-snippets, images, files and many more. You can drag tiles, drop them, rearrange them. Also they automatically update so you always get the latest information.</p>
                 </li>
+                <li data-sizex="1" data-sizey="1" class="tile orange todo">
+					<span class="tileType"><img src="images/icons/tileIcons/todoIcon.png" /></span>
+					<img class="tileIcon" src="images/icons/tileIcons/todoIcon.png" />
+					<!--start-->
+					<div id="list">
+						<p><span class="todoName">Some Work</span></p>
+						<p><span class="todoName">Other Work 2</span></p>
+						<p><span class="todoName">Added Work 3</span></p>
+						<p><span class="todoName">Finish other work</span></p>
+						<p><span class="todoName">Plus Work 4</span></p>
+					</div>
+				</li>
+				<li data-sizex="1" data-sizey="1" class="tile blue"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
                     <span class="tileType"><img src="images/icons/tileIcons/clockIcon.png" /></span>
@@ -32,25 +45,17 @@
                     <p class="event" id="2">Fork yaod on<br />Github<br /><span class="timeDue">Tommorow</span></p>
                     <p class="event" id="3">Update git on<br />local computer<br /><span class="timeDue">All Day</span></p>
 				</li>
-				<li data-sizex="1" data-sizey="1" class="tile orange todo">
-					<span class="tileType"><img src="images/icons/tileIcons/todoIcon.png" /></span>
-					<img class="tileIcon" src="images/icons/tileIcons/todoIcon.png" />
-					<!--start-->
-					<div id="list">
-						<p><span class="todoName">Some Work</span></p>
-						<p><span class="todoName">Other Work 2</span></p>
-						<p><span class="todoName">Added Work 3</span></p>
-						<p><span class="todoName">Finish other work</span></p>
-						<p><span class="todoName">Plus Work 4</span></p>
-					</div>
-				</li>
 				<li data-sizex="2" data-sizey="1" class="tile green"></li>
 				<li data-sizex="1" data-sizey="1" class="tile green image">
 					<span class="tileType"><img src="images/icons/tileIcons/photoIcon.png" /></span>
 					<img class="tileIcon" src="images/icons/tileIcons/photoIcon.png" />
 				</li>
 				<li data-sizex="1" data-sizey="1" class="tile orange"></li>
+				<li data-sizex="2" data-sizey="1" class="tile red"></li>
 			</ul>
+			
+			
+			
 			<div class="groupTitle"><span>Documents</span></div>
 			<ul class="sortable droptrue">
 				<li data-sizex="2" data-sizey="1" class="tile orange word"></li>
