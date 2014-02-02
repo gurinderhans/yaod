@@ -10,8 +10,12 @@
 		<div id="droparea">
 			<div class="groupTitle"><span>Home</span></div>
 			<ul class="sortable droptrue">
-				<li data-sizex="3" data-sizey="2" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="2" class="tile darkPink"></li>
+				<li data-sizex="3" data-sizey="2" class="tile blue weather">
+					<img />
+					<p></p>
+					<h2></h2>
+				</li>
 				<li data-sizex="1" data-sizey="1" class="tile purple textSnippet">
                     <span class="tileType"><img src="images/icons/tileIcons/textSnippetIcon.png" /></span>
                     <img class="tileIcon" src="images/icons/tileIcons/textSnippetIcon.png" />
@@ -29,7 +33,7 @@
 						<p><span class="todoName">Plus Work 4</span></p>
 					</div>
 				</li>
-				<li data-sizex="1" data-sizey="1" class="tile blue"></li>
+				<li data-sizex="1" data-sizey="1" class="tile blueishgreen"></li>
 				<li data-sizex="2" data-sizey="1" class="tile darkBlue"></li>
 				<li data-sizex="1" data-sizey="1" class="tile blue clock">
                     <span class="tileType"><img src="images/icons/tileIcons/clockIcon.png" /></span>

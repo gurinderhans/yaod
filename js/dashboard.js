@@ -17,7 +17,7 @@ $(function(){
 	$(".tile").prepend("<div class='invisible_cover'></div>");
 	
 	/*Tile Opening*/
-	$(".tile").mouseup(function(){
+	/*$(".tile").mouseup(function(){
 		$(this).css({
 			"z-index": "100000",
 			"position": "absolute",
@@ -27,7 +27,7 @@ $(function(){
 			"height": "500px"
 		});
 		$(this).siblings().css("opacity", "0.4");
-	});
+	});*/
 	
 	/*Notifications*/
 });

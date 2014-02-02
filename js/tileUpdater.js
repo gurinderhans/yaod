@@ -1,4 +1,17 @@
 (function ($) {
+	var storage = window.localStorage;
+	//little local storage check
+	if(window.localStorage){
+		//if available do nothing
+	} else{
+		console.log("not available");
+	}
+	//save local storge function
+	function saveToLocalStorage(nameOfStorage, dataToSave){
+    	storage.setItem(nameOfStorage, dataToSave);
+    }
+
+
 	/*Updating the image Tile*/
 	//fire the image update function
 	var b=setInterval(function(){updateImage()},20100);
@@ -28,7 +41,7 @@
 		});
 	}
 
-	/*updating file Icon*/
+	/*updating file tile Icon*/
 	var f=setInterval(function(){updateFile()},10100);
 	var fileToRequest = 0;
 	function updateFile(){
@@ -58,13 +71,21 @@
 			} else{
 				fileToRequest++;
 			}
-			//changing info
-			$(".file > .fileInfoWrapper > div.left, .file > .fileInfoWrapper > div.right").fadeOut('fast', function(){
-				$(".file > .fileInfoWrapper > div.left").children("img").attr("src", fileImageUrl);
-				$(".file > .fileInfoWrapper > div.right").children("h3").text(fileName);
-				$(".file > .fileInfoWrapper > div.right").children("p").find(".size").text(fileSize);
-				$(".file > .fileInfoWrapper > div.right").children("p").find(".uploaded").text(fileLastChanged);
-			});
+			if(fileName.length > 16){
+				var fileNameI = fileName.substring(0,7);
+				var fileNameF = fileName.slice(-7);
+				//console.log(fileNameF);
+				$(".file > .fileInfoWrapper > div.right").children("h3").text(fileNameI+".."+fileNameF);
+				
+			} else{
+				//changing info
+				$(".file > .fileInfoWrapper > div.left, .file > .fileInfoWrapper > div.right").fadeOut('fast', function(){
+					$(".file > .fileInfoWrapper > div.left").children("img").attr("src", fileImageUrl);
+					$(".file > .fileInfoWrapper > div.right").children("h3").text(fileName);
+					$(".file > .fileInfoWrapper > div.right").children("p").find(".size").text(fileSize);
+					$(".file > .fileInfoWrapper > div.right").children("p").find(".uploaded").text(fileLastChanged);
+				});
+			}
 			$(".file > .fileInfoWrapper > div.left, .file > .fileInfoWrapper > div.right").delay(100).fadeIn();
 		});
 	}
@@ -144,6 +165,84 @@
 			$("#clockWrapper h1").html('<span id="hour">'+hour+'</span><span id="minute">:'+minute+'</span>');
 		});
 	}
+	
+	//Weather tile update
+	getLocation();
+	function getLocation(){
+		if (navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(get_api_data);
+		} else{
+			alert("Geolocation is not supported by this browser.");
+		}
+	}
+
+	function get_api_data(position){
+		try{
+			var DEG = 'c';//units of temp
+			var d = new Date();//this variable is defined in other functions too. ***GLOABLIZE IT***
+			//get the cached data
+			var cache = JSON.parse(storage.getItem('weather'));
+		    console.log(cache);
+		    //api gives temp in kelvin
+		    function convertTemperature(kelvin){
+		    	// Convert the temperature to either Celsius or Fahrenheit:
+		    	return Math.round(DEG == 'c' ? (kelvin - 273.15) : (kelvin*9/5 - 459.67));
+		    }
+		    //If cache isn't old for more than    \\//30 minutes//\\         than display cache
+			if(cache && cache.timestamp && cache.timestamp > d.getTime() - 30*60*1000){
+				var city = cache.data.city.name;
+				var country = cache.data.city.country;
+				var temp = new Array();
+				var weatherIcon = new Array();
+				var condition = new Array();
+				var i =0;
+				//iterate over all list objects
+				$.each(cache.data.list, function(){
+					condition[i] = this.weather[0].main;
+					weatherIcon[i] = this.weather[0].icon;
+					temp[i] = this.main.temp;
+					i++;
+				});
+				/*console.log(convertTemperature(minTemp[0])+"° / "+convertTemperature(maxTemp[0])+"°");
+				console.log(condition[0]);
+				console.log(weatherIcon[0]);*/
+				$(".weather img").attr("src", "images/icons/weatherIcons/"+weatherIcon[0]+".png");
+				$(".weather p").html(convertTemperature(temp[0])+"°C");
+				$(".weather h2").html(city+", "+country);
+				/*console.log(city+", "+country);
+				console.log("not old");
+				console.log(cache.timestamp);
+				console.log(cache.timestamp-(d.getTime() - 30*60*1000));
+				console.log(d.getTime() - 30*60*1000);*/
+				//getWeatherFromLocalstorage();
+			} else{//else get new data and overwrite the previous cache if any
+				console.log('Old, lets refresh');
+				var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&callback=?';
+				//var cache = localStorage.weatherCache && JSON.parse(localStorage.weatherCache);
+				var weatherCache;
+				//save cache with time stamp for later use purposes
+				$.getJSON(weatherAPI, function(response){
+					weatherCache = JSON.stringify({
+						timestamp:((new Date()).getTime()),	// getTime() returns milliseconds
+						data: response
+					});
+					saveToLocalStorage("weather", weatherCache);
+		        });
+		        //call the main funcion again
+		        //get_api_data(position);
+			}
+			
+		} catch(e){
+			console.log("Error. We can't find information about your city!");
+			console.log(e);
+		}
+
+    }
+
+    
+
+
+
 
 
 	/*Small Text Tile Update */
@@ -161,12 +260,23 @@
 				$(".textSnippet p").html(newText).show("slide", { direction: "left" }, 200);
 				$(".textSnippet .tileType").fadeIn();
 			});
+			//console.log(splitPara(textInP));
 		
 		}
 	}
+	/*
+	var i = 0;
 	
+	function splitPara(text){
+		var splittedNewText = text.split(" ");
+		var textArrayLen = splittedNewText.length;
+		var newStringI = splittedNewText.slice(0,textArrayLen);
+		var newStringF
+		return textArrayLen;
+	}*/
+
 	/*Localstorage Get todoData*/
-	getFromlocalstorage = function() {
+	getTodoFromlocalstorage = function() {
         if (localStorage.getItem('todoData')) {
             list.innerHTML = localStorage.getItem('todoData');
         } else{
@@ -174,12 +284,12 @@
         }
     };
     /* Clear and save to localstorage the todoData*/
-    saveTolocalstorage = function() {
+    /*saveTolocalstorage = function() {
         localStorage.clear();
         console.log('cleared ');
         localStorage.setItem('todoData', list.innerHTML);
         console.log(list.innerHTML);
-    };
+    };*/
 	/*todo Tile NOT UPDATE JUST GET*/
 	var e = setTimeout(function(){getToDos()},3000);/*Ignoring this for now*/
 	function getToDos(){
@@ -190,7 +300,7 @@
 	}
 	function todosUpdate(){
 		var list = document.getElementById('list');
-		getFromlocalstorage(); //call the information
+		getTodoFromlocalstorage(); //call the information
 		/*ToDo Tile Update Items when done*/
 		$(".checkbox").click(function(){
 			$(this).toggleClass('checked unchecked');
@@ -201,7 +311,8 @@
 		    	$(this).siblings(".todoName").css({"text-decoration": "none", "color":"#fff"});
 		        $(this).html("&#9744;");
 		    }
-		    saveTolocalstorage();
+		    //save to local storage using function below with two parameters
+		    saveToLocalStorage("todoData", list.innerHTML);
 		});
 	}
 	//run the todos update function above

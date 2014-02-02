@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+
+html, body{
+	background:#E3E3E3;
+	font-family:"Roboto";
+	overflow-y:hidden;
+}
+#wrapper{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+div.coloumn{
+	height:100%;
+	display:inline-block;
+	margin-right:-7px;
+}
+div#one{
+	width:5%;
+	background-color:#555;
+}
+div#two{
+	width:20%;
+	background-color:#FFBFAD;
+}
+div#three{
+	width:30.65%;
+	background-color:#FFE9E3;
+}
+div#four{
+	width:45%;
+	background-color:#eee;
+}
+
+@media only screen 
+and (min-device-width : 120px) 
+and (max-device-width : 120px) {
+	div{
+	width:45%;
+	color:white;
+}
+}
