@@ -28,7 +28,11 @@
 					// Animation complete.
 					$(".image > .tileType").fadeIn();
 					$(this).attr("src",imageURL);
-					$(this).css("margin","0");
+					$(this).css({
+						margin: "0",
+						width: "100%",
+						height: "100%"
+					});
 				}).delay(100).fadeIn();
 				if(imageToRequest == (numImagesTotal-1)){
 					imageToRequest = 0;

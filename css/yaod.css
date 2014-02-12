@@ -70,22 +70,145 @@ h1,p{
 .darkBlue{background:#0056c7;}
 .red{background:#bd2a51;}
 
-/*Tile Sizes*/
-[data-sizex="1"]{
-	width:165px;
+
+.gridster li{
+	list-style-type:none;
 }
-[data-sizex="2"]{
-	width:340px;
+
+
+/*Clock tile*/
+#clockWrapper{
+    width:80%;
+    height:80%;
+    text-align:center;
+    display:table;
+    margin:10% auto;
 }
-[data-sizex="3"]{
-	width:513px;
+#clockWrapper h1{
+    display:table-cell;
+    vertical-align:middle;
+    font-weight:100;
+    font-size:4em;
 }
-[data-sizey="2"]{
-	height:348px;
+#hour{
+	font-weight:bold;
 }
-[data-sizey="1"]{
-	height:170px;
+
+/*Calendar tile*/
+.calendar h1{
+	position:absolute;
+	right:3%;
+	top:3%;
+	font-weight:100;
+	font-size:4.5em;
 }
+.calendar h3{
+	position:absolute;
+	right:3%;
+	top:40%;
+	font-weight:100;
+	font-size:1.4em;
+	
+}
+.calendar p{
+	font-weight:300;
+	font-size:1.1em;
+    position:absolute;
+    top:17%;
+    left:5%;
+    background:#7c63c7;
+    display:none;
+}
+.timeDue{
+	font-size:0.7em;
+	font-weight:bold;
+}
+
+/*Text Snippet Styles */
+.textSnippet p{
+	font-size: 0.85em;
+	margin:3% auto;
+	width: 90%;
+	line-height:1.5;
+	display:none;
+}
+/*Checklist tile styles*/
+#list{
+	display:none;
+	position:absolute;
+	top:15px;
+	left:7px;
+	font-family: Roboto Slab;
+	font-size:0.8em;
+}
+#list p{
+	margin-bottom:11px;
+}
+.todoName{
+	font-weight:400;
+	font-size:1.2em;
+}
+.checkbox{
+	cursor:pointer;
+	margin-right:5px;
+}
+
+
+
+
+
+
+
+
+/*-------------------REVIEW ALL CSS UNDERNEATH------------------*/
+
+
+
+
+
+
+
+
+
+/*File Icons and file tiles */
+[data-sizex="1"] .fileIcon{
+	display:block;
+	margin:5% auto 0 auto;
+}
+[data-sizex="1"] .fileInfoWrapper h3{
+	font-size:1em;
+	font-weight:700;
+	text-align:center;
+	margin:0;
+}
+[data-sizex="2"] .fileInfoWrapper h3{
+	font-size:1.3em;
+	font-weight:300;
+	margin:0;
+}
+.fileInfoWrapper div{
+	margin:5% 0 0 0;
+}
+.fileInfoWrapper .left{
+	float:left;
+	width:42%;
+	text-align:right;
+}
+.fileInfoWrapper .right{
+	float:right;
+	width:54%;
+	text-align:left;
+}
+.fileInfoWrapper .right > p{
+	font-size:0.8em;
+	font-weight:700;
+}
+
+
+
+
+
+
 /*Dashboard Styles*/
 .sortable{
 	list-style-type:none;
@@ -132,110 +255,10 @@ h1,p{
 [data-sizex="1"] span{
 	left: 6%;
 }
-/*Text Snippet Styles */
-.textSnippet p{
-	font-size: 0.7em;
-	margin:3% auto;
-	width: 90%;
-	line-height:1.5;
-	display:none;
-}
-/*Clock tile*/
-#clockWrapper{
-    width:80%;
-    height:80%;
-    text-align:center;
-    display:table;
-    margin:10% auto;
-}
-#clockWrapper h1{
-    display:table-cell;
-    vertical-align:middle;
-    font-weight:100;
-    font-size:3em;
-}
-#hour{
-	font-weight:bold;
-}
-/*Calendar tile*/
-.calendar h1{
-	position:absolute;
-	right:3%;
-	top:3%;
-	font-weight:100;
-	font-size:3.5em;
-}
-.calendar h3{
-	position:absolute;
-	right:3%;
-	top:35%;
-	font-weight:100;
-}
-.calendar p{
-	font-weight:300;
-	font-size:0.9em;
-    position:absolute;
-    top:17%;
-    left:5%;
-    background:#7c63c7;
-    display:none;
-}
-.timeDue{
-	font-size:0.7em;
-	font-weight:bold;
-}
-/*File Icons and file tiles */
-[data-sizex="1"] .fileIcon{
-	display:block;
-	margin:5% auto 0 auto;
-}
-[data-sizex="1"] .fileInfoWrapper h3{
-	font-size:1em;
-	font-weight:700;
-	text-align:center;
-	margin:0;
-}
-[data-sizex="2"] .fileInfoWrapper h3{
-	font-size:1em;
-	font-weight:300;
-	margin:0;
-}
-.fileInfoWrapper div{
-	margin:5% 0 0 0;
-}
-.fileInfoWrapper .left{
-	float:left;
-	width:42%;
-	text-align:right;
-}
-.fileInfoWrapper .right{
-	float:right;
-	width:54%;
-	text-align:left;
-}
-.fileInfoWrapper .right > p{
-	font-size:0.7em;
-	font-weight:700;
-}
-/*Checklist tile styles*/
-#list{
-	display:none;
-	position:absolute;
-	top:10px;
-	left:7px;
-	font-family: Roboto Slab;
-	font-size:0.8em;
-}
-#list p{
-	margin-bottom:5px;
-}
-.todoName{
-	font-weight:400;
-}
-.checkbox{
-	cursor:pointer;
-	margin-right:5px;
-}
+
+
+
+
 
 /*Tile Icons*/
 [data-sizex="1"] .tileIcon{
@@ -272,7 +295,7 @@ h1,p{
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
 /* Styles */
-.sortable{
-
+.gridster{
+width:40px;
 }
 }

@@ -14,7 +14,7 @@ $(function(){
 	$( ".sortable" ).disableSelection();
 	
 	/*Adding an invisible layer on top of each tile*/
-	$(".tile").prepend("<div class='invisible_cover'></div>");
+	$(".gridster li").prepend("<div class='invisible_cover'></div>");
 	
 	/*Tile Opening*/
 	/*$(".tile").mouseup(function(){
